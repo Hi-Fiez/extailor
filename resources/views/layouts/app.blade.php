@@ -22,6 +22,9 @@
         nav .navbar-brand{
             height: 65px;            
         }
+        footer {
+            padding-top: 87px;
+        }                
         #dlappbtn {
             border-top-left-radius: 30px;
             border-bottom-left-radius: 30px;
@@ -84,12 +87,12 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                        <li role="presentation" class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="font-size: 18px; padding-top: 27px;">
+                        <li id="gabung" role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="font-size: 18px; padding-top: 27px; padding-bottom: 26px;">
                                 <font color="#FFF" id="comein">Gabung</font> <font color="#8DC63F"><span class="caret"></span></font>
                             </a>
                             <ul class="dropdown-menu">
-                              <li><a href="{{ route('register') }}">Daftar</a></li>
+                              <li><a href="{{ route('register') }}">Daftar<span class="glyphicon glyphicon-pencil pull-right"></span></a></li>
                           </ul>
                       </li>
                       <li><a href="#"><button id="dlappbtn" class="btn navbar-inverse btn-lg" style="border-color: white;"><font id="dlapp" color="white">Download APP</font></button></a></li>

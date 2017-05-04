@@ -3,8 +3,8 @@
 @section('content')
 <style type="text/css">  
     body {
-      padding-top: 100px;
-  }
+      padding-top: 125px;
+  }  
 </style>
 <div class="container">
     <div class="row">
