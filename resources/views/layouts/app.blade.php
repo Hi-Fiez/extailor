@@ -17,13 +17,23 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">        
     <style type="text/css">
         body {
-            padding-top: 66px;            
+            padding-top: 74px;            
         }
         nav .navbar-brand{
             height: 65px;            
         }
-        #dlapp:hover {
+        #dlappbtn {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-width: 2px;
+        }
+        #dlappbtn:hover #dlapp {
             color: #8DC63F;
+        }
+        #dlappbtn:hover {
+            background-color: black;         
         }
         #fb-footer {
             color: white;
@@ -31,6 +41,9 @@
         #fb-footer:hover {
             color: #8DC63F;
             text-decoration: none;
+        }
+        #comein:hover {
+            color: #9d9d9d;
         }
     </style>
 
@@ -55,9 +68,9 @@
                     </button>                    
 
                     <!-- Branding Image -->
-                    <img class="pull-left" src="/img/logo.png" style="height: 45px; width: auto; padding-top: 20px;">
-                    <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 18px; padding-top: 25px;">
-                        <b>Express Tailor</b>
+                    <img class="pull-left" src="/img/logo.png" style="height: 50px; width: auto; padding-top: 25px;">
+                    <a class="navbar-brand" href="{{ url('/') }}" style="font-size: 18px; padding-top: 30px;">
+                        <font color="#FFF"><b>Express Tailor</b></font>
                     </a>                                        
                 </div>
 
@@ -72,14 +85,14 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                         <li role="presentation" class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="font-size: 18px; padding-top: 25px;">
-                                Gabung <font color="#8DC63F"><span class="caret"></span></font>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="font-size: 18px; padding-top: 27px;">
+                                <font color="#FFF" id="comein">Gabung</font> <font color="#8DC63F"><span class="caret"></span></font>
                             </a>
                             <ul class="dropdown-menu">
                               <li><a href="{{ route('register') }}">Daftar</a></li>
                           </ul>
                       </li>
-                      <li><a href="#"><button class="btn navbar-inverse btn-lg" style="border-color: white;"><font id="dlapp" color="white">Download APP</font></button></a></li>
+                      <li><a href="#"><button id="dlappbtn" class="btn navbar-inverse btn-lg" style="border-color: white;"><font id="dlapp" color="white">Download APP</font></button></a></li>
                       @else
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="font-size: 18px; padding-top: 25px;">

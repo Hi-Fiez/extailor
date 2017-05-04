@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<style type="text/css">  
-body {
-  padding-top: 74px;
-}
-</style>
 <div>
   <center>
     <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 910px; height: auto;">
