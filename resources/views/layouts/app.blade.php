@@ -16,38 +16,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">        
     <style type="text/css">
-        body {
-            padding-top: 74px;            
-        }
-        nav .navbar-brand{
-            height: 65px;            
-        }
-        footer {
-            padding-top: 87px;
-        }                
-        #dlappbtn {
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-            border-width: 2px;
-        }
-        #dlappbtn:hover #dlapp {
-            color: #8DC63F;
-        }
-        #dlappbtn:hover {
-            background-color: black;         
-        }
-        #fb-footer {
-            color: white;
-        }
-        #fb-footer:hover {
-            color: #8DC63F;
-            text-decoration: none;
-        }
-        #comein:hover {
-            color: #9d9d9d;
-        }
+
     </style>
 
     <!-- Scripts -->
@@ -97,9 +66,9 @@
                       </li>
                       <li><a href="#"><button id="dlappbtn" class="btn navbar-inverse btn-lg" style="border-color: white;"><font id="dlapp" color="white">Download APP</font></button></a></li>
                       @else
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="font-size: 18px; padding-top: 25px;">
-                            {{ Auth::user()->name }} <font color="#8DC63F"><span class="caret"></span></font>
+                      <li id="gabung" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="font-size: 18px; padding-top: 27px; padding-bottom: 26px;">
+                            <font color="#FFF" id="comein">{{ Auth::user()->name }}</font> <font color="#8DC63F"><span class="caret"></span></font>
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
@@ -115,7 +84,7 @@
                             </form>
                         </li>                                        
                     </ul>                
-                    <li><a href="#"><button class="btn navbar-inverse btn-lg" style="border-color: white;"><font id="dlapp" color="white">Download APP</font></button></a></li>
+                    <li><a href="#"><button id="dlappbtn" class="btn navbar-inverse btn-lg" style="border-color: white;"><font id="dlapp" color="white">Download APP</font></button></a></li>
                     @endif
                 </ul>
             </div>
